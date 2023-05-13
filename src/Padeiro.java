@@ -14,10 +14,6 @@ public class Padeiro extends Funcionario {
         return estoque;
     }
 
-    public double getSalario() {
-        return getCargaHoraria() * 10;
-    }
-
 
     public void administraEstoque() {
 
@@ -63,4 +59,11 @@ public class Padeiro extends Funcionario {
             }
         }
     }
+
+
+    @Override
+    public double getSalario() {
+        return getCargaHoraria() * 10;
+    }
+
 }

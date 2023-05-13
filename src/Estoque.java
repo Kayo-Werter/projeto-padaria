@@ -9,9 +9,6 @@ public class Estoque {
         this.listaProdutos = listaProdutos;
     }
 
-    public Estoque(){
-
-    }
 
     public List<Produtos> getListaProdutos() {
         return listaProdutos;

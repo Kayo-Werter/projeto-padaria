@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Produtos implements Comparable<Produtos>{
     private String nome;
     private double valor;
@@ -6,7 +8,6 @@ public class Produtos implements Comparable<Produtos>{
     public Produtos(String descricao, double valor, int quantidade) {
         this.nome = descricao;
         this.valor = valor;
-        this.quantidade = quantidade;
     }
 
     public String getNome() {
@@ -20,6 +21,7 @@ public class Produtos implements Comparable<Produtos>{
     public int getQuantidade() {
         return quantidade;
     }
+
 
     @Override
     public String toString() {

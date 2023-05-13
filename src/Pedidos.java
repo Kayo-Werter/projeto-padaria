@@ -13,5 +13,7 @@ public class Pedidos {
         this.cliente = cliente;
     }
 
-
+    public List<Produtos> getListaProdutos() {
+        return listaProdutos;
+    }
 }
