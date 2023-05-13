@@ -22,7 +22,7 @@ public class Padeiro extends Funcionario {
     public void administraEstoque() {
 
         Scanner leitura = new Scanner(System.in);
-        System.out.println("Adicione produtos ao estoque");
+        System.out.println("========== Administrando o estoque ==========");
         List<Produtos> listaProdutos = new ArrayList<>();
         this.estoque = new Estoque(listaProdutos);
 
@@ -36,6 +36,7 @@ public class Padeiro extends Funcionario {
             leitura.nextLine();
 
             if (opcao == 1) {
+                System.out.println("========== Adicionando produtos ==========");
                 System.out.print("Produto: ");
                 String prod = leitura.nextLine();
 
@@ -47,7 +48,7 @@ public class Padeiro extends Funcionario {
 
                 Produtos produtos = new Produtos(prod, valor, qtd);
                 listaProdutos.add(produtos);
-                System.out.println("Item Adicionado!");
+                System.out.println(qtd + " Unidade(s) de '" + prod + "' Adicionado(s) ao estoque!");
 
             } else if (opcao == 2) {
                 if (listaProdutos.size() == 0) {
@@ -56,11 +57,10 @@ public class Padeiro extends Funcionario {
                     System.out.println(this.estoque);
                 }
             } else if (opcao == 3) {
-                System.out.println("Saindo do estoque");
+                System.out.println("========== Saindo do estoque ==========");
             } else {
                 System.out.println("Opção inválida!");
             }
         }
-        System.out.println(estoque);
     }
 }

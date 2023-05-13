@@ -19,10 +19,9 @@ public class Estoque {
 
     @Override
     public String toString() {
-        return "===============================" +
-                "Estoque" +
-                "===============================" +
-                "\nProdutos em estoque: " + listaProdutos + "\n" +
-                "===============================";
+        return "==========" +
+                " Produto no estoque " +
+                "==========" +
+                listaProdutos;
     }
 }
