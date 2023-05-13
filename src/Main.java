@@ -1,23 +1,53 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Adicione produtos ao estoque");
         ArrayList<Produtos> lista = new ArrayList<>();
-
-        Produtos pao = new Produtos("Pao", 1, 3);
-        lista.add(pao);
-        Produtos ovo = new Produtos("Ovo", 2, 2);
-        lista.add(ovo);
-        Produtos queijo = new Produtos("Queijo", 3, 2);
-        lista.add(queijo);
-        Produtos bolo = new Produtos("Bolo", 4, 1);
-        lista.add(bolo);
-
         Estoque estoque = new Estoque(lista);
 
+        int opc = 1;
+        while (opc != 3) {
+
+            System.out.println("Digite 3 para sair do programa e 2 para adicionar um novo produto e 1 para listar");
+            opc = leitura.nextInt();
+            leitura.nextLine();
+
+
+
+            if (opc == 2) {
+                System.out.print("Produto: ");
+                String prod = leitura.nextLine();
+
+                System.out.print("\nValor do produto: ");
+                double valor = leitura.nextDouble();
+
+                System.out.println("\nQuantidade disponível: ");
+                int qtd = leitura.nextInt();
+
+
+                Produtos produtos = new Produtos(prod, valor, qtd);
+                lista.add(produtos);
+
+                System.out.println("Item Adicionado!");
+            } else if (opc == 1) {
+                if (lista.size() == 0) {
+                    System.out.println("Estoque vazio! adicione um produto antes de listar");
+                } else {
+                    System.out.println(estoque);
+                }
+            } else {
+                System.out.println("Saindo do programa");
+            }
+        }
+
         System.out.println(estoque);
+
+
 
 
 //        Scanner leitura = new Scanner(System.in);
@@ -28,8 +58,8 @@ public class Main {
 //        double saldo = leitura.nextDouble();
 //        Cliente c1 = new Cliente(nome, saldo);
 //
-//        int sair = 1;
-//        while (sair != 0) {
+//        int opc = 1;
+//        while (opc != 0) {
 //            System.out.println("Qual produto você deseja comprar?");
 //            String prod = leitura.nextLine();
 //
@@ -41,11 +71,11 @@ public class Main {
 //
 //            if (compraRealizada) {
 //                System.out.println("Compra realizada!");
-//                System.out.println("Digite 0 para sair do programa e 1 para continuar comprando: ");
-//                sair = leitura.nextInt();
+//                System.out.println("Digite 0 para opc do programa e 1 para continuar comprando: ");
+//                opc = leitura.nextInt();
 //            } else {
 //                System.out.println("Saldo insuficiente!");
-//                sair = 0;
+//                opc = 0;
 //            }
 //        }
 //

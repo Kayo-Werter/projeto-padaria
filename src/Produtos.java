@@ -17,6 +17,13 @@ public class Produtos implements Comparable<Produtos>{
         return valor;
     }
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+
+
+
     @Override
     public String toString() {
         return "\nproduto = " + nome +
