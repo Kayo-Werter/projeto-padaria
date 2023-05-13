@@ -17,8 +17,6 @@ public class Main {
             opc = leitura.nextInt();
             leitura.nextLine();
 
-
-
             if (opc == 2) {
                 System.out.print("Produto: ");
                 String prod = leitura.nextLine();
