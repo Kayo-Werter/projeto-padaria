@@ -11,7 +11,7 @@ public class Menu {
         int escolha = 999;
 
         System.out.println("========== Bem vindo ao JannyPaes ==========\n");
-        System.out.println("Para iniciarmos me diga qual o seu cargo");
+        System.out.println("Digite: ");
         System.out.println("1 - Gerente");
         System.out.println("2 - Padeiro");
         System.out.println("0 - sair");
@@ -25,7 +25,7 @@ public class Menu {
             } else if (escolha == 1) {
                 menuGerente(g1);
             } else if (escolha == 2) {
-            menuPadeiro(p1);
+            this.menuPadeiro(p1);
         }
         }
     }
@@ -82,7 +82,17 @@ public class Menu {
             } else if (escolha == 2) {
                 System.out.println(padeiro.getEstoque());
             }
-
         }
     }
+
+    public void menuCliente(Cliente c1) {
+
+
+
+
+    }
+
+
+
+
 }

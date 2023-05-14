@@ -5,13 +5,13 @@ public class Cliente {
     private String nome;
     private String endereco;
     private int telefone;
-    private List<Produtos> listaProdutos;
+    private List<Produtos> historicoCompras;
     private double saldo;
 
     public Cliente(String nome, double saldo) {
         this.nome = nome;
         this.saldo = saldo;
-        this.listaProdutos = new ArrayList<>();
+        this.historicoCompras = new ArrayList<>();
     }
 
     public String getNome() {
@@ -27,7 +27,7 @@ public class Cliente {
     }
 
     public List<Produtos> getHistoricoDeCompras() {
-        return listaProdutos;
+        return historicoCompras;
     }
 
     public double getSaldo() {
@@ -37,7 +37,7 @@ public class Cliente {
     public boolean lancaCompra(Produtos produtos){
         if (this.saldo >= produtos.getValor()) {
             this.saldo -= produtos.getValor();
-            this.listaProdutos.add(produtos);
+            this.historicoCompras.add(produtos);
             return true;
         }
         return false;

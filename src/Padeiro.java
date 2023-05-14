@@ -15,6 +15,11 @@ public class Padeiro extends Funcionario {
     }
 
 
+    @Override
+    public double getSalario() {
+        return getCargaHoraria() * 10;
+    }
+
     public void administraEstoque() {
 
         Scanner leitura = new Scanner(System.in);
@@ -61,9 +66,5 @@ public class Padeiro extends Funcionario {
     }
 
 
-    @Override
-    public double getSalario() {
-        return getCargaHoraria() * 10;
-    }
 
 }
