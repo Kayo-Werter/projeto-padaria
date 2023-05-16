@@ -8,10 +8,9 @@ public class Menu {
 
 
     public void menuInicial (Gerente g1, Padeiro p1, Cliente c1) {
-    
+        System.out.println("");
 
 
-      
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
@@ -62,7 +61,7 @@ public class Menu {
 
     public void menuGerente(Gerente g1) {
         int escolha = 999;
-        
+
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
             System.out.println("========== Bem vindo ao JannyPaes ==========\n");
@@ -115,7 +114,7 @@ public class Menu {
     }
 
     public void menuCliente(Cliente c1) {
-      
+
 
     }
 

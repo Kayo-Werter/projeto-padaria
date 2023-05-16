@@ -16,18 +16,12 @@ public class Cliente {
         return nome;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public int getTelefone() {
-        return telefone;
-    }
 
     public List<Produtos> getCarrinho() {
         return Carrinho;
     }
 
+    
 
   
 

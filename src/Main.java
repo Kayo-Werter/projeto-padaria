@@ -12,11 +12,15 @@ public class Main {
       
       // menu.menuInicial(g, p, c);
 
-      Padaria p1 = new Padaria();
+        Padeiro p1 = new Padeiro("kayo", "gerente", 5);
 
-      p1.visualizaEstoque();
+        Menu menu = new Menu();
 
-  
+        p1.administraEstoque();
+
+
+
+
 
     }
 }
