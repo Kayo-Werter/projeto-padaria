@@ -3,12 +3,20 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Gerente g = new Gerente("Kayo", "Gerente", 4);
-        Padeiro p = new Padeiro("kayo", "gerente", 5);
-        Menu menu = new Menu();
+      
+      // Gerente g = new Gerente("Kayo", "Gerente", 4);
+      // Padeiro p = new Padeiro("kayo", "gerente", 5);
+      // Cliente c = new Cliente ("joao");
+      
+      // Menu menu = new Menu();
+      
+      // menu.menuInicial(g, p, c);
 
-        menu.menuGeral(g, p);
+      Padaria p1 = new Padaria();
 
+      p1.visualizaEstoque();
+
+  
 
     }
 }

@@ -7,7 +7,11 @@ public class Menu {
     private Gerente gerente;
 
 
-    public void menuInicial (Padeiro p1, Gerente g1, Cliente c1) {
+    public void menuInicial (Gerente g1, Padeiro p1, Cliente c1) {
+    
+
+
+      
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
@@ -111,8 +115,7 @@ public class Menu {
     }
 
     public void menuCliente(Cliente c1) {
-        // O cliente poderá visualizar os produtos, colocar produtos no carrinho, finalizar a compra e
-        // e vizualizar o desconto disponivel
+      
 
     }
 

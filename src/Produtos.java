@@ -5,9 +5,10 @@ public class Produtos implements Comparable<Produtos>{
     private double valor;
     private int quantidade;
 
-    public Produtos(String descricao, double valor, int quantidade) {
-        this.nome = descricao;
+    public Produtos(String nome, double valor, int quantidade) {
+        this.nome = nome;
         this.valor = valor;
+        this.quantidade = quantidade;
     }
 
     public String getNome() {
