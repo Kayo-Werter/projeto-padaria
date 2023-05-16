@@ -95,20 +95,20 @@ public class Menu {
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
 
-            System.out.println("========== Bem vindo ao JannyPaes ==========\n");
+            System.out.println("========== Bem vindo ao Menu do Padeiro ==========\n");
             System.out.println("Escolha uma opção:");
-            System.out.println("1 - Adicionar novo funcionário");
-            System.out.println("2 - Listar produtos");
-            System.out.println("0 - sair");
+            System.out.println("1 - Administrar Estoque");
+            System.out.println("2 - Verificar salário");
+            System.out.println("0 - sair do Menu");
             escolha = leitura.nextInt();
 
             if (escolha == 0) {
                 System.out.println("========== Saindo do programa.... ==========");
                 break;
             } else if (escolha == 1) {
-                this.padeiro.administraEstoque();
+                p1.administraEstoque();
             } else if (escolha == 2) {
-                System.out.println(padeiro.getEstoque());
+                System.out.println(p1.getSalario());
             }
         }
     }
