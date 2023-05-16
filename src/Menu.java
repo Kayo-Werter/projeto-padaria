@@ -111,7 +111,8 @@ public class Menu {
     }
 
     public void menuCliente(Cliente c1) {
-        // O cliente poderá visualizar os produtos, colocar produtos no carrinho, finalizar a compra
+        // O cliente poderá visualizar os produtos, colocar produtos no carrinho, finalizar a compra e
+        // e vizualizar o desconto disponivel
 
     }
 
