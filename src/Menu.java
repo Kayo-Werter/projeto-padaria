@@ -6,6 +6,22 @@ public class Menu {
     private Estoque estoque;
     private Gerente gerente;
 
+
+    public void menuInicial () {
+        Scanner leitura = new Scanner(System.in);
+        int escolha = 999;
+
+        System.out.println("========== Bem vindo ao JannyPaes ==========\n");
+        System.out.println("1 - Sou cliente");
+        System.out.println("2 - Desejo ser cliente");
+        System.out.println("3 - Sou funcionário");
+        System.out.println("0 - sair");
+        escolha = leitura.nextInt();
+
+        
+
+
+    }
     public void menuGeral(Gerente g1, Padeiro p1){
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
