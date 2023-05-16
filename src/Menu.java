@@ -7,7 +7,7 @@ public class Menu {
     private Gerente gerente;
 
 
-    public void menuInicial () {
+    public void menuInicial (Padeiro p1, Gerente g1, Cliente c1) {
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
@@ -18,11 +18,22 @@ public class Menu {
         System.out.println("0 - sair");
         escolha = leitura.nextInt();
 
-        
-
-
+        while (escolha != 0) {
+            if (escolha == 0) {
+                System.out.println("========== Saindo do programa.... ==========");
+                break;
+            } else if (escolha == 1) {
+                menuCliente(c1);
+            } else if (escolha == 2) {
+                // Falta construir função para criar um novo cliente
+                break;
+            } else if (escolha == 3) {
+                menuFuncionarios(g1, p1);
+            }
+        }
     }
-    public void menuGeral(Gerente g1, Padeiro p1){
+
+    public void menuFuncionarios(Gerente g1, Padeiro p1){
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
@@ -32,7 +43,6 @@ public class Menu {
         System.out.println("2 - Padeiro");
         System.out.println("0 - sair");
         escolha = leitura.nextInt();
-
 
         while (escolha != 0) {
             if (escolha == 0) {
@@ -48,7 +58,7 @@ public class Menu {
 
     public void menuGerente(Gerente g1) {
         int escolha = 999;
-
+        
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
             System.out.println("========== Bem vindo ao JannyPaes ==========\n");
@@ -73,7 +83,6 @@ public class Menu {
             }
         }
     }
-
 
 
     public void menuPadeiro(Padeiro p1){
@@ -102,9 +111,7 @@ public class Menu {
     }
 
     public void menuCliente(Cliente c1) {
-
-
-
+        // O cliente poderá visualizar os produtos, colocar produtos no carrinho, finalizar a compra
 
     }
 
