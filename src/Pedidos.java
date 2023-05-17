@@ -16,4 +16,17 @@ public class Pedidos {
     public List<Produtos> getListaProdutos() {
         return listaProdutos;
     }
+
+
+    //Criar Metodo de desconto (> 50 = 10%)
+    public static double calcularDesconto(double valorTotal) {
+        if (valorTotal <= 50) {
+            return valorTotal;
+        } else {
+            double desconto = valorTotal * 0.1;
+            double valorComDesconto = valorTotal - desconto;
+            return valorComDesconto;
+
+        }
+    }
 }

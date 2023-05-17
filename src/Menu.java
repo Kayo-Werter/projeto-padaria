@@ -6,8 +6,10 @@ public class Menu {
     private Estoque estoque;
     private Gerente gerente;
 
+    private Cliente cliente;
 
-    public void menuInicial (Padeiro p1, Gerente g1, Cliente c1) {
+
+    public void menuInicial(Padeiro p1, Gerente g1, Cliente c1) {
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
@@ -33,7 +35,7 @@ public class Menu {
         }
     }
 
-    public void menuFuncionarios(Gerente g1, Padeiro p1){
+    public void menuFuncionarios(Gerente g1, Padeiro p1) {
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
@@ -51,14 +53,14 @@ public class Menu {
             } else if (escolha == 1) {
                 menuGerente(g1);
             } else if (escolha == 2) {
-            this.menuPadeiro(p1);
-        }
+                this.menuPadeiro(p1);
+            }
         }
     }
 
     public void menuGerente(Gerente g1) {
         int escolha = 999;
-        
+
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
             System.out.println("========== Bem vindo ao JannyPaes ==========\n");
@@ -85,7 +87,7 @@ public class Menu {
     }
 
 
-    public void menuPadeiro(Padeiro p1){
+    public void menuPadeiro(Padeiro p1) {
 
         int escolha = 999;
 
@@ -114,9 +116,27 @@ public class Menu {
         // O cliente poderá visualizar os produtos, colocar produtos no carrinho, finalizar a compra e
         // e vizualizar o desconto disponivel
 
+
+        int escolha = 999;
+        while (escolha != 0) {
+            Scanner leitura = new Scanner(System.in);
+
+            System.out.println("========== Bem vindo ao JannyPaes ==========\n");
+            System.out.println("Escolha uma opção:");
+            System.out.println("1 - Vizualizar balcão"); //adicionar ao carrinho e remorer
+            System.out.println("2 - Ver carrinho");// finalizar compra com desconto ou sair
+            System.out.println("0 - sair");
+            escolha = leitura.nextInt();
+
+            if (escolha == 0) {
+                System.out.println("========== Saindo do programa.... ==========");
+                break;
+            } else if (escolha == 1) {
+                System.out.println(cliente.a());
+            } else if (escolha == 2) {
+                System.out.println(cliente.getCarrinho());
+            }
+        }
+
     }
-
-
-
-
 }
