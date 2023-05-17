@@ -103,8 +103,8 @@ public class Menu {
             escolha = leitura.nextInt();
 
             if (escolha == 0) {
-                System.out.println("========== Saindo do programa.... ==========");
-                break;
+                    System.out.println("========== Saindo do programa.... ==========");
+                    break;
             } else if (escolha == 1) {
                 p1.administraEstoque();
             } else if (escolha == 2) {

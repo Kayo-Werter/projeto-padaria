@@ -15,9 +15,6 @@ public class Padeiro extends Funcionario {
         return estoque;
     }
 
-    public void setEstoque(Estoque estoque) {
-        this.estoque = estoque;
-    }
 
     public void administraEstoque() {
 
@@ -64,7 +61,7 @@ public class Padeiro extends Funcionario {
 
     @Override
     public double getSalario() {
-        return getCargaHoraria() * 10;
+        return (getCargaHoraria() * 4) * 7.5;
     }
 
 
