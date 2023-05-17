@@ -9,6 +9,8 @@ public class Main {
       Cliente c = new Cliente ("joao");
       
       // Menu menu = new Menu();
+
+        System.out.println();
       
       // menu.menuInicial(g, p, c);
 
