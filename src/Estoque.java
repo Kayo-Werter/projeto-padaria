@@ -14,7 +14,6 @@ public class Estoque {
   }
 
 
-
   public void produtosEstoque() {
     Produtos pao = new Produtos("Pão", 1.75, 10);
     Produtos boloLeite = new Produtos("bolo de leite", 18, 4);

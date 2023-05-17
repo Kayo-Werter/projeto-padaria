@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Padeiro extends Funcionario {
 
-    private Estoque estoque;
+    private Estoque estoque = new Estoque();
 
 
     public Padeiro(String nome, String cargo, int cargaHoraria) {

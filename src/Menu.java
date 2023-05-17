@@ -7,11 +7,10 @@ public class Menu {
     private Gerente gerente;
 
 
-
     public void menuInicial (Gerente g1, Padeiro p1, Cliente c1) {
         System.out.println("");
 
-        Estoque estoque = new Estoque();
+
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
