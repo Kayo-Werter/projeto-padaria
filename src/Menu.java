@@ -133,7 +133,7 @@ public class Menu {
             } else if (escolha == 1) {
                 System.out.println("Deseja adicionar um desses produtos ? ");
                 System.out.println("5 - Sim e 6 - Não");
-                System.out.println(this.estoque);
+                System.out.println(estoque.getListaProdutos());
 
             } else if (escolha == 2) {
                 System.out.println("carrinho");
