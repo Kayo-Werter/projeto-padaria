@@ -7,6 +7,11 @@ public class Cliente {
     private int telefone;
     private List<Produtos> Carrinho;
 
+    public void setCarrinho(List<Produtos> carrinho) {
+        Carrinho = carrinho;
+    }
+
+
     public Cliente(String nome) {
         this.nome = nome;
         this.Carrinho = new ArrayList<>();
@@ -21,8 +26,9 @@ public class Cliente {
         return Carrinho;
     }
 
+    public void adicionarProduto(Produtos produtos) {
+        getCarrinho().add(produtos);
 
 
-  
-
+    }
 }

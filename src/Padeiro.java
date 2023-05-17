@@ -4,7 +4,7 @@
 
  public class Padeiro extends Funcionario {
 
-     private Estoque estoque = new Estoque();
+     private Estoque estoque;
 
 
      public Padeiro(String nome, String cargo, int cargaHoraria) {

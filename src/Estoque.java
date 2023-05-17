@@ -10,8 +10,9 @@ public class Estoque {
   }
 
   public List<Produtos> getListaProdutos() {
-      return listaProdutos;
+    return listaProdutos;
   }
+
 
 
   public void produtosEstoque() {
@@ -36,7 +37,7 @@ public class Estoque {
     int tamanho = this.listaProdutos.size();
     return tamanho;
   }
-  
+
     @Override
     public String toString() {
         return "==========" +

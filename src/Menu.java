@@ -7,10 +7,11 @@ public class Menu {
     private Gerente gerente;
 
 
+
     public void menuInicial (Gerente g1, Padeiro p1, Cliente c1) {
         System.out.println("");
 
-
+        Estoque estoque = new Estoque();
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
@@ -114,11 +115,33 @@ public class Menu {
     }
 
     public void menuCliente(Cliente c1) {
+        int escolha = 999;
+        Estoque estoque = new Estoque();
 
+        while (escolha != 0) {
+            Scanner leitura = new Scanner(System.in);
+
+            System.out.println("========== Bem vindo ao JannyPaes ==========\n");
+            System.out.println("Escolha uma opção:");
+            System.out.println("1 - Vizualizar lista"); //adicionar ao carrinho e remorer
+            System.out.println("2 - Ver carrinho");// finalizar compra com desconto ou sair
+            System.out.println("0 - sair");
+            escolha = leitura.nextInt();
+
+            if (escolha == 0) {
+                System.out.println("========== Saindo do programa.... ==========");
+                break;
+            } else if (escolha == 1) {
+                System.out.println("Deseja adicionar um desses produtos ? ");
+                System.out.println("5 - Sim e 6 - Não");
+                System.out.println(this.estoque);
+
+                } else if (escolha == 2) {
+                    System.out.println("carrinho");
+                }
+            }
+        }
 
     }
 
 
-
-
-}
