@@ -38,11 +38,11 @@ public class Estoque {
     return tamanho;
   }
 
-    @Override
-    public String toString() {
-        return "==========" +
-                " Produto Disponíveis no estoque " +
-                "==========" +
-                listaProdutos;
-    }
+  @Override
+  public String toString() {
+    return "==========" +
+            " Produto Disponíveis no estoque " +
+            "==========" +
+            listaProdutos;
+  }
 }

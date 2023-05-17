@@ -55,8 +55,8 @@ public class Menu {
             } else if (escolha == 1) {
                 menuGerente(g1);
             } else if (escolha == 2) {
-            this.menuPadeiro(p1);
-        }
+                this.menuPadeiro(p1);
+            }
         }
     }
 
@@ -136,12 +136,11 @@ public class Menu {
                 System.out.println("5 - Sim e 6 - Não");
                 System.out.println(this.estoque);
 
-                } else if (escolha == 2) {
-                    System.out.println("carrinho");
-                }
+            } else if (escolha == 2) {
+                System.out.println("carrinho");
             }
         }
-
     }
 
+}
 
