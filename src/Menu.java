@@ -5,9 +5,7 @@ public class Menu {
     private Padeiro padeiro;
     private Estoque estoque;
     private Gerente gerente;
-
-    private Cliente cliente;
-
+    
 
     public void menuInicial(Padeiro p1, Gerente g1, Cliente c1) {
         Scanner leitura = new Scanner(System.in);
