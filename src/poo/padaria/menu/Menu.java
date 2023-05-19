@@ -1,13 +1,20 @@
+package poo.padaria.menu;
+
+import poo.padaria.produtos.Estoque;
+import poo.padaria.usuarios.Cliente;
+import poo.padaria.usuarios.Funcionario;
+import poo.padaria.usuarios.Padeiro;
+
 import java.util.Scanner;
 
 public class Menu {
     private int opcao;
     private Padeiro padeiro;
     private Estoque estoque;
-    private Gerente gerente;
+    private Funcionario.Gerente gerente;
 
 
-    public void menuInicial (Gerente g1, Padeiro p1, Cliente c1) {
+    public void menuInicial (Funcionario.Gerente g1, Padeiro p1, Cliente c1) {
         System.out.println("");
 
 
@@ -36,14 +43,14 @@ public class Menu {
         }
     }
 
-    public void menuFuncionarios(Gerente g1, Padeiro p1){
+    public void menuFuncionarios(Funcionario.Gerente g1, Padeiro p1){
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
         System.out.println("========== Bem vindo ao JannyPaes ==========\n");
         System.out.println("Digite: ");
-        System.out.println("1 - Gerente");
-        System.out.println("2 - Padeiro");
+        System.out.println("1 - poo.padaria.funcionarios.Funcionario.poo.padaria.funcionarios.Gerente");
+        System.out.println("2 - poo.padaria.funcionarios.Padeiro");
         System.out.println("0 - sair");
         escolha = leitura.nextInt();
 
@@ -59,7 +66,7 @@ public class Menu {
         }
     }
 
-    public void menuGerente(Gerente g1) {
+    public void menuGerente(Funcionario.Gerente g1) {
         int escolha = 999;
 
         while (escolha != 0) {
@@ -95,11 +102,11 @@ public class Menu {
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
 
-            System.out.println("========== Bem vindo ao Menu do Padeiro ==========\n");
+            System.out.println("========== Bem vindo ao poo.padaria.menu.Menu do poo.padaria.funcionarios.Padeiro ==========\n");
             System.out.println("Escolha uma opção:");
-            System.out.println("1 - Administrar Estoque");
+            System.out.println("1 - Administrar poo.padaria.produtos.Estoque");
             System.out.println("2 - Verificar salário");
-            System.out.println("0 - sair do Menu");
+            System.out.println("0 - sair do poo.padaria.menu.Menu");
             escolha = leitura.nextInt();
 
             if (escolha == 0) {

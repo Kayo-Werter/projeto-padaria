@@ -1,5 +1,8 @@
-import java.util.ArrayList;
-import java.util.List;
+package poo.padaria.usuarios;
+
+import poo.padaria.produtos.Estoque;
+import poo.padaria.produtos.Produtos;
+
 import java.util.Scanner;
 
 public class Padeiro extends Funcionario {
@@ -46,11 +49,7 @@ public class Padeiro extends Funcionario {
                 System.out.println(qtd + " Unidade(s) de '" + prod + "' Adicionado(s) ao estoque!");
 
             } else if (opcao == 2) {
-                if (getEstoque().tamanhoEstoque() == 0) {
-                    System.out.println("Estoque vazio! adicione um produto antes de listar");
-                } else {
-                    System.out.println(this.estoque);
-                }
+                System.out.println(this.estoque);
             } else if (opcao == 3) {
                 System.out.println("========== Saindo do estoque ==========");
             } else {

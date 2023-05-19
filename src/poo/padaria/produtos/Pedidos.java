@@ -1,3 +1,7 @@
+package poo.padaria.produtos;
+
+import poo.padaria.usuarios.Cliente;
+
 import java.util.List;
 
 public class Pedidos {

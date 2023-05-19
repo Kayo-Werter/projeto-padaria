@@ -1,4 +1,4 @@
-import java.util.List;
+package poo.padaria.produtos;
 
 public class Produtos implements Comparable<Produtos>{
     private String nome;

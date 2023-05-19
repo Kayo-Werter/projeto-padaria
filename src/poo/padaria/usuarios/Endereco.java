@@ -1,3 +1,5 @@
+package poo.padaria.usuarios;
+
 public class Endereco{
     private String rua;
     private int num;

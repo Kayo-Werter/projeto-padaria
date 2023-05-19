@@ -1,3 +1,5 @@
+package poo.padaria.usuarios;
+
 public class Gerente extends Funcionario{
 
 

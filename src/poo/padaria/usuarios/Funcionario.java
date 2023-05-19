@@ -1,3 +1,5 @@
+package poo.padaria.usuarios;
+
 public class Funcionario {
     private String nome;
     private String cargo;
@@ -51,5 +53,21 @@ public class Funcionario {
 
     public void setValorHora(double valorHora) {
         this.valorHora = valorHora;
+    }
+
+    public static class Gerente extends Funcionario {
+
+
+        public Gerente(String nome, String cargo, int cargaHoraria) {
+            super(nome, cargo, cargaHoraria);
+        }
+
+
+
+
+        @Override
+        public double getSalario(){
+            return getCargaHoraria() * 10;
+        }
     }
 }

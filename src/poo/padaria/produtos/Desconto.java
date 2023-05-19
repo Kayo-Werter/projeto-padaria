@@ -1,3 +1,5 @@
+package poo.padaria.produtos;
+
 public class Desconto {
     private double valorOriginal;
     private double percentualDesconto;
