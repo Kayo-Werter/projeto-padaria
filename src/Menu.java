@@ -17,19 +17,19 @@ public class Menu {
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
-        System.out.println("========== Bem vindo ao JannyPaes ==========\n");
-        System.out.println("1 - Sou cliente");
-        System.out.println("2 - Desejo ser cliente");
-        System.out.println("3 - Sou funcionário");
-        System.out.println("0 - sair");
+        String menu = """
+                ========== Bem vindo ao JannyPaes ==========\n
+                1 - Sou cliente
+                2 - Desejo ser cliente
+                3 - Sou funcionário
+                0 - sair
+                """;
+        System.out.println(menu);
         escolha = leitura.nextInt();
 
         while (escolha != 0) {
-            if (escolha == 0) {
-                System.out.println("========== Saindo do programa.... ==========");
-                break;
-            } else if (escolha == 1) {
-                menuCliente(c1);
+            if (escolha == 1) {
+            menuCliente(c1);
             } else if (escolha == 2) {
                 // Falta construir função para criar um novo cliente
                 break;
@@ -43,22 +43,28 @@ public class Menu {
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
-        System.out.println("========== Bem vindo ao JannyPaes ==========\n");
-        System.out.println("Digite: ");
-        System.out.println("1 - Gerente");
-        System.out.println("2 - Padeiro");
-        System.out.println("0 - sair");
+        String menu = """
+                ========== Bem vindo ao JannyPaes ==========\n
+                Digite: 1 - Gerente
+                        2 - Padeiro
+                        0 - sair
+                
+                """;
+        System.out.println(menu);
         escolha = leitura.nextInt();
 
         while (escolha != 0) {
-            if (escolha == 0) {
-                System.out.println("========== Saindo do programa.... ==========");
-                break;
-            } else if (escolha == 1) {
+            if (escolha == 1) {
                 menuGerente(g1);
             } else if (escolha == 2) {
+<<<<<<< Updated upstream
             this.menuPadeiro(p1);
         }
+=======
+                this.menuPadeiro(p1);
+
+            }
+>>>>>>> Stashed changes
         }
     }
 
