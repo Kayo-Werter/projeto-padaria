@@ -1,21 +1,17 @@
 package poo.padaria.usuarios;
 
-import poo.padaria.produtos.Estoque;
+import poo.padaria.menu.Padaria;
 import poo.padaria.produtos.Produtos;
 
 import java.util.Scanner;
 
 public class Padeiro extends Funcionario {
 
-    private Estoque estoque = new Estoque();
+    private Padaria padaria = new Padaria();
 
 
     public Padeiro(String nome, String cargo, int cargaHoraria) {
         super(nome, cargo, cargaHoraria);
-    }
-
-    public Estoque getEstoque() {
-        return estoque;
     }
 
 
@@ -45,11 +41,11 @@ public class Padeiro extends Funcionario {
                 int qtd = leitura.nextInt();
 
                 Produtos produtos = new Produtos(prod, valor, qtd);
-                getEstoque().adicionarEstoque(produtos);
+                padaria.adicionarEstoque(produtos);
                 System.out.println(qtd + " Unidade(s) de '" + prod + "' Adicionado(s) ao estoque!");
 
             } else if (opcao == 2) {
-                System.out.println(this.estoque);
+                System.out.println(padaria.getEstoquePadaria());
             } else if (opcao == 3) {
                 System.out.println("========== Saindo do estoque ==========");
             } else {

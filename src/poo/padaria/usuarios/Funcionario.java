@@ -70,4 +70,10 @@ public class Funcionario {
             return getCargaHoraria() * 10;
         }
     }
+
+    @Override
+    public String toString() {
+        return "\nFuncionario: " + nome +
+                ", cargo: " + cargo;
+    }
 }

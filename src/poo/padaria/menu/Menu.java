@@ -1,8 +1,6 @@
 package poo.padaria.menu;
 
-import poo.padaria.produtos.Estoque;
-import poo.padaria.usuarios.Cliente;
-import poo.padaria.usuarios.Funcionario;
+import poo.padaria.usuarios.Gerente;
 import poo.padaria.usuarios.Padeiro;
 
 import java.util.Scanner;
@@ -10,18 +8,23 @@ import java.util.Scanner;
 public class Menu {
     private int opcao;
     private Padeiro padeiro;
-    private Estoque estoque;
-    private Funcionario.Gerente gerente;
+    private Gerente gerente;
+    private Padaria padaria;
+
+    public Menu(Padaria padaria) {
+        this.padaria = padaria;
+        padaria.produtosEstoque();
+    }
 
 
-    public void menuInicial (Funcionario.Gerente g1, Padeiro p1, Cliente c1) {
-        System.out.println("");
+    public void menuInicial (Padeiro p1) {
 
 
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
         System.out.println("========== Bem vindo ao JannyPaes ==========\n");
+        System.out.println("");
         System.out.println("1 - Sou cliente");
         System.out.println("2 - Desejo ser cliente");
         System.out.println("3 - Sou funcionário");
@@ -29,28 +32,29 @@ public class Menu {
         escolha = leitura.nextInt();
 
         while (escolha != 0) {
+
             if (escolha == 0) {
                 System.out.println("========== Saindo do programa.... ==========");
                 break;
             } else if (escolha == 1) {
-                menuCliente(c1);
+                menuCliente();
             } else if (escolha == 2) {
                 // Falta construir função para criar um novo cliente
                 break;
             } else if (escolha == 3) {
-                menuFuncionarios(g1, p1);
+                menuFuncionarios(p1);
             }
         }
     }
 
-    public void menuFuncionarios(Funcionario.Gerente g1, Padeiro p1){
+    public void menuFuncionarios(Padeiro p1){
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
         System.out.println("========== Bem vindo ao JannyPaes ==========\n");
         System.out.println("Digite: ");
-        System.out.println("1 - poo.padaria.funcionarios.Funcionario.poo.padaria.funcionarios.Gerente");
-        System.out.println("2 - poo.padaria.funcionarios.Padeiro");
+        System.out.println("1 - Gerente");
+        System.out.println("2 - Padeiro");
         System.out.println("0 - sair");
         escolha = leitura.nextInt();
 
@@ -59,20 +63,20 @@ public class Menu {
                 System.out.println("========== Saindo do programa.... ==========");
                 break;
             } else if (escolha == 1) {
-                menuGerente(g1);
+                menuGerente();
             } else if (escolha == 2) {
                 this.menuPadeiro(p1);
             }
         }
     }
 
-    public void menuGerente(Funcionario.Gerente g1) {
+    public void menuGerente() {
         int escolha = 999;
 
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
             System.out.println("========== Bem vindo ao JannyPaes ==========\n");
-            System.out.println("Olá gerente " + g1.getNome());
+            System.out.println("Olá gerente! ");
             System.out.println("Escolha uma opção para iniciar");
             System.out.println("1 - Adicionar novo funcionário");
             System.out.println("2 - Listar produtos");
@@ -81,15 +85,19 @@ public class Menu {
 
             if (escolha == 0) {
                 System.out.println("========== Saindo do programa.... ==========");
-                break;
             } else if (escolha == 1) {
                 System.out.println("Nome do funcionário: ");
                 String nome = leitura.nextLine();
+
                 System.out.println("Cargo do funcionário: ");
                 String cargo = leitura.nextLine();
+
                 System.out.println("Carga Horária diária: ");
                 int ch = leitura.nextInt();
-                this.padeiro = new Padeiro(nome, cargo, ch);
+
+                padeiro = new Padeiro(nome, cargo, ch);
+                padaria.adicionarFuncionario(padeiro);
+                System.out.println("Adicionado com sucesso! ");
             }
         }
     }
@@ -120,27 +128,23 @@ public class Menu {
         }
     }
 
-    public void menuCliente(Cliente c1) {
+    public void menuCliente() {
         int escolha = 999;
-        Estoque estoque = new Estoque();
 
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
 
             System.out.println("========== Bem vindo ao JannyPaes ==========\n");
             System.out.println("Escolha uma opção:");
-            System.out.println("1 - Vizualizar lista"); //adicionar ao carrinho e remorer
-            System.out.println("2 - Ver carrinho");// finalizar compra com desconto ou sair
+            System.out.println("1 - Vizualizar produtos");
+            System.out.println("2 - Ver carrinho");
             System.out.println("0 - sair");
             escolha = leitura.nextInt();
 
             if (escolha == 0) {
                 System.out.println("========== Saindo do programa.... ==========");
-                break;
             } else if (escolha == 1) {
-                System.out.println("Deseja adicionar um desses produtos ? ");
-                System.out.println("5 - Sim e 6 - Não");
-                System.out.println(estoque.getListaProdutos());
+                System.out.println(padaria.getEstoquePadaria());
 
             } else if (escolha == 2) {
                 System.out.println("carrinho");
