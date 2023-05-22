@@ -59,6 +59,7 @@ public class Padaria {
         this.listaClientes.add(camila);
 
         Produtos pao = new Produtos("Pão", 1.75, 10);
+        Produtos ovo = new Produtos("ovo", 21.75, 3);
         Produtos boloLeite = new Produtos("bolo de leite", 18, 4);
         Produtos boloFofo = new Produtos("bolo fofo", 15, 7);
         Produtos presunto = new Produtos("presunto", 5.90, 30);
