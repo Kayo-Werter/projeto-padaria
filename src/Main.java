@@ -16,20 +16,10 @@ public class Main {
                 Cliente c = new Cliente("Pablo", "213.653.194-78");
                 Padaria pa = new Padaria();
 
-                String data = "22/05/2023";
+                pa.inicializar();
 
-                List<Produtos> lista = new ArrayList<>();
-
-                Produtos presunto = new Produtos("presunto", 5.90, 30);
-                Produtos mussarela = new Produtos("mussarela", 8.70, 30);
-
-                lista.add(presunto);
-                lista.add(mussarela);
-
-                HistoricoDeCompras compras = new HistoricoDeCompras(data, c, lista);
-
-                pa.registrarPedidos(compras);
                 System.out.println(pa.visualizacao());
 
+                System.out.println(pa.getListaProdutos());
         }
 }

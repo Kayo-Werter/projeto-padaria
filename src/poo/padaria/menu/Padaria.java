@@ -19,8 +19,11 @@ public class Padaria {
 
     private List<HistoricoDeCompras> historicoDeVendas = new ArrayList<>();
 
-    private Gerente gerente;
 
+    public void inicializar(){
+        dadosPadaria();
+        comprasRealizadas();
+    }
 
     public void cadastroCliente(String nome, String cpf) {
         Scanner leitura = new Scanner(System.in);
@@ -46,10 +49,36 @@ public class Padaria {
         return listaProdutos;
     }
 
+
     public List<HistoricoDeCompras> visualizacao(){
         return historicoDeVendas;
     }
 
+    public void comprasRealizadas() {
+        String data = "21/05/2023";
+
+        Cliente pablo = new Cliente("Pablo", "463.983.614-12");
+
+        List<Produtos> produtosComprados = new ArrayList<>();
+
+        Produtos presunto = new Produtos("presunto", 5.90, 5);
+        Produtos mussarela = new Produtos("mussarela", 8.70, 5);
+
+
+        getListaProdutos().remove(presunto);
+        getListaProdutos().remove(mussarela);
+
+        produtosComprados.add(presunto);
+        produtosComprados.add(mussarela);
+
+        HistoricoDeCompras compras = new HistoricoDeCompras(data, pablo, produtosComprados);
+        registrarPedidos(compras);
+
+    }
+
+    public void realizarCompra(){
+
+    }
 
 
 
@@ -85,8 +114,11 @@ public class Padaria {
         this.listaFuncionarios.add(chines);
         this.listaFuncionarios.add(kayo);
         this.listaFuncionarios.add(janny);
-    }
 
+
+
+
+    }
 
 
 }
