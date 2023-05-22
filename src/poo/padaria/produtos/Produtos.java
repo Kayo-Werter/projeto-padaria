@@ -1,5 +1,7 @@
 package poo.padaria.produtos;
 
+import java.util.List;
+
 public class Produtos implements Comparable<Produtos>{
     private String nome;
     private double valor;

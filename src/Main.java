@@ -1,51 +1,35 @@
-import poo.padaria.menu.Menu;
+import poo.padaria.menu.Padaria;
+import poo.padaria.produtos.HistoricoDeCompras;
+import poo.padaria.produtos.Produtos;
 import poo.padaria.usuarios.Cliente;
-import poo.padaria.usuarios.Funcionario;
+import poo.padaria.usuarios.Gerente;
 import poo.padaria.usuarios.Padeiro;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-        Padeiro p = new Padeiro("kayo", "Padeiro", 44);
-        Padaria pa = new Padaria();
-=======
-        Funcionario.Gerente g = new Funcionario.Gerente("Kayo", "poo.padaria.funcionarios.Funcionario.poo.padaria.funcionarios.Gerente", 4);
-        Padeiro p = new Padeiro("kayo", "poo.padaria.funcionarios.Padeiro", 44);
-        Cliente c = new Cliente ("joao");
->>>>>>> parent of a227534 (organizando administrador principal)
+                Gerente g = new Gerente("Kayo", "Gerente", 4);
+                Padeiro p = new Padeiro("kayo", "Padeiro", 44);
+                Cliente c = new Cliente("Pablo", "213.653.194-78");
+                Padaria pa = new Padaria();
 
+                String data = "22/05/2023";
 
-        Menu menu = new Menu();
+                List<Produtos> lista = new ArrayList<>();
 
-<<<<<<< HEAD
-=======
-        Gerente g = new Gerente("Kayo", "Gerente", 4);
-        Padeiro p = new Padeiro("Chines", "Padeiro", 44);
-        Cliente c = new Cliente ("Pablo", "461.357.984-15");
-        Padaria pa = new Padaria();
->>>>>>> Stashed changes
-=======
-        menu.menuInicial(g, p, c);
->>>>>>> parent of a227534 (organizando administrador principal)
+                Produtos presunto = new Produtos("presunto", 5.90, 30);
+                Produtos mussarela = new Produtos("mussarela", 8.70, 30);
 
+                lista.add(presunto);
+                lista.add(mussarela);
 
+                HistoricoDeCompras compras = new HistoricoDeCompras(data, c, lista);
 
-        String data = "22/05/2023";
+                pa.registrarPedidos(compras);
+                System.out.println(pa.visualizacao());
 
-        List<Produtos> lista = new ArrayList<>();
-
-        Produtos presunto = new Produtos("presunto", 5.90, 30);
-        Produtos mussarela = new Produtos("mussarela", 8.70, 30);
-
-        lista.add(presunto);
-        lista.add(mussarela);
-
-        HistoricoDeCompras compras = new HistoricoDeCompras(data, c, lista);
-
-        pa.registrarPedidos(compras);
-        System.out.println(pa.visualizacao());
-
-    }
+        }
 }

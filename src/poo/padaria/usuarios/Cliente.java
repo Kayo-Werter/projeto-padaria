@@ -1,44 +1,48 @@
 package poo.padaria.usuarios;
 
+import poo.padaria.produtos.Produtos;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-    private List<Cliente> clientes;
-    private String cliente;
+    private String nome;
     private String cpf;
-    private String nascimento;
+    private int telefone;
+    private List<Produtos> Carrinho;
 
-    public Cliente(String cliente, String cpf, String nascimento) {
-        clientes = new ArrayList<>();
+
+    public Cliente(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
     }
 
-    public String getCliente() {
-        return cliente;
+    public void setCarrinho(List<Produtos> carrinho) {
+        Carrinho = carrinho;
     }
 
-    public String getCpf() {
-        return cpf;
+
+    public Cliente(String nome) {
+        this.nome = nome;
+        this.Carrinho = new ArrayList<>();
     }
 
-    public String getNascimento() {
-        return nascimento;
+    public String getNome() {
+        return nome;
     }
 
-    public void adicionarCliente(String cliente, String cpf, String nascimento) {
-        ClienteInfo novoCliente = new ClienteInfo(cliente, cpf, nascimento);
-        clientes.add(novoCliente);
+
+    public List<Produtos> getCarrinho() {
+        return Carrinho;
     }
 
-    public void removerCliente(Cliente cliente) {
-        clientes.remove(cliente);
+    public void adicionarProduto(Produtos produtos) {
+        getCarrinho().add(produtos);
     }
 
-    public List<ClienteInfo> getClientes() {
-        return clientes;
-    }
+    @Override
+    public String toString() {
+        return this.nome + ", " + this.cpf;
 
-    // Adicionar clientes ao ArrayList
-        cliente.adicionarCliente("Cliente 1", "12345678901", "01/01/2000");
-        cliente.adicionarCliente("Cliente 2", "98765432109", "02/02/1995");
-        cliente.adicionarCliente("Cliente 3", "45678912345", "03/03/1985");
+    }
+}

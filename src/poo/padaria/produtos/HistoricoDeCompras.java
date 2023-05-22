@@ -1,9 +1,9 @@
-<<<<<<< Updated upstream:src/poo/padaria/produtos/HistoricoDeCompras.java
 package poo.padaria.produtos;
-=======
+
+import poo.padaria.usuarios.Cliente;
+
 import java.util.ArrayList;
 import java.util.List;
->>>>>>> Stashed changes:src/HistoricoDeCompras.java
 
 public class HistoricoDeCompras {
     private String data;

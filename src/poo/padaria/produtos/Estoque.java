@@ -34,6 +34,10 @@ public class Estoque {
     this.listaProdutos.add(produtos);
   }
 
+  public int tamanhoEstoque() {
+    int tamanho = this.listaProdutos.size();
+    return tamanho;
+  }
 
   @Override
   public String toString() {

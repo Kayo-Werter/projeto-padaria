@@ -1,10 +1,18 @@
+package poo.padaria.menu;
+
+import poo.padaria.produtos.HistoricoDeCompras;
+import poo.padaria.produtos.Produtos;
+import poo.padaria.usuarios.Cliente;
+import poo.padaria.usuarios.Funcionario;
+import poo.padaria.usuarios.Gerente;
+import poo.padaria.usuarios.Padeiro;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 
 public class Padaria {
-
     private List<Produtos> listaProdutos = new ArrayList<>();
     private List<Cliente> listaClientes = new ArrayList<>();
     private List<Funcionario> listaFuncionarios = new ArrayList<>();
@@ -59,7 +67,6 @@ public class Padaria {
         this.listaClientes.add(camila);
 
         Produtos pao = new Produtos("Pão", 1.75, 10);
-        Produtos ovo = new Produtos("ovo", 21.75, 3);
         Produtos boloLeite = new Produtos("bolo de leite", 18, 4);
         Produtos boloFofo = new Produtos("bolo fofo", 15, 7);
         Produtos presunto = new Produtos("presunto", 5.90, 30);
