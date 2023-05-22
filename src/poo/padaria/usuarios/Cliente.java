@@ -1,12 +1,15 @@
 package poo.padaria.usuarios;
 
+import poo.padaria.produtos.Produtos;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
     private String nome;
     private String cpf;
-    private String nascimento;
+    private int telefone;
+    private List<Produtos> Carrinho;
 
 
     public Cliente(String nome, String cpf) {
@@ -14,22 +17,32 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public String getCliente() {
+    public void setCarrinho(List<Produtos> carrinho) {
+        Carrinho = carrinho;
+    }
+
+
+    public Cliente(String nome) {
+        this.nome = nome;
+        this.Carrinho = new ArrayList<>();
+    }
+
+    public String getNome() {
         return nome;
     }
 
-    public String getCpf() {
-        return cpf;
+
+    public List<Produtos> getCarrinho() {
+        return Carrinho;
     }
 
-    public String getNascimento() {
-        return nascimento;
+    public void adicionarProduto(Produtos produtos) {
+        getCarrinho().add(produtos);
     }
-
 
     @Override
     public String toString() {
-        return "\nCliente: " + nome +
-                ", cpf: " + cpf;
+        return this.nome + ", " + this.cpf;
+
     }
 }

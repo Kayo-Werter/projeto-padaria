@@ -54,26 +54,4 @@ public class Funcionario {
     public void setValorHora(double valorHora) {
         this.valorHora = valorHora;
     }
-
-    public static class Gerente extends Funcionario {
-
-
-        public Gerente(String nome, String cargo, int cargaHoraria) {
-            super(nome, cargo, cargaHoraria);
-        }
-
-
-
-
-        @Override
-        public double getSalario(){
-            return getCargaHoraria() * 10;
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "\nFuncionario: " + nome +
-                ", cargo: " + cargo;
-    }
 }
