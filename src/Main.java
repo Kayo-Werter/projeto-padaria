@@ -1,34 +1,34 @@
 import poo.padaria.menu.Menu;
-import poo.padaria.menu.Padaria;
 import poo.padaria.usuarios.Cliente;
 import poo.padaria.usuarios.Funcionario;
-import poo.padaria.usuarios.Gerente;
 import poo.padaria.usuarios.Padeiro;
 
 public class Main {
     public static void main(String[] args) {
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         Padeiro p = new Padeiro("kayo", "Padeiro", 44);
         Padaria pa = new Padaria();
+=======
+        Funcionario.Gerente g = new Funcionario.Gerente("Kayo", "poo.padaria.funcionarios.Funcionario.poo.padaria.funcionarios.Gerente", 4);
+        Padeiro p = new Padeiro("kayo", "poo.padaria.funcionarios.Padeiro", 44);
+        Cliente c = new Cliente ("joao");
+>>>>>>> parent of a227534 (organizando administrador principal)
 
 
-        pa.funcionariosCadastrados();
-        pa.produtosEstoque();
-        pa.clientesCadastrados();
-        System.out.println(pa.getListaClientes());
+        Menu menu = new Menu();
 
-
-//        Menu menu = new Menu(pa);
-//
-//        menu.menuInicial(p);
-
+<<<<<<< HEAD
 =======
         Gerente g = new Gerente("Kayo", "Gerente", 4);
         Padeiro p = new Padeiro("Chines", "Padeiro", 44);
         Cliente c = new Cliente ("Pablo", "461.357.984-15");
         Padaria pa = new Padaria();
 >>>>>>> Stashed changes
+=======
+        menu.menuInicial(g, p, c);
+>>>>>>> parent of a227534 (organizando administrador principal)
 
 
 

@@ -1,6 +1,8 @@
 package poo.padaria.menu;
 
-import poo.padaria.usuarios.Gerente;
+import poo.padaria.produtos.Estoque;
+import poo.padaria.usuarios.Cliente;
+import poo.padaria.usuarios.Funcionario;
 import poo.padaria.usuarios.Padeiro;
 
 import java.util.Scanner;
@@ -8,24 +10,23 @@ import java.util.Scanner;
 public class Menu {
     private int opcao;
     private Padeiro padeiro;
-    private Gerente gerente;
-    private Padaria padaria;
-
-    public Menu(Padaria padaria) {
-        this.padaria = padaria;
-        padaria.produtosEstoque();
-    }
+    private Estoque estoque;
+    private Funcionario.Gerente gerente;
 
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream:src/poo/padaria/menu/Menu.java
     public void menuInicial (Padeiro p1) {
+=======
+    public void menuInicial (Funcionario.Gerente g1, Padeiro p1, Cliente c1) {
+        System.out.println("");
+>>>>>>> parent of a227534 (organizando administrador principal)
 
 
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
         System.out.println("========== Bem vindo ao JannyPaes ==========\n");
-        System.out.println("");
         System.out.println("1 - Sou cliente");
         System.out.println("2 - Desejo ser cliente");
         System.out.println("3 - Sou funcionário");
@@ -33,29 +34,28 @@ public class Menu {
         escolha = leitura.nextInt();
 
         while (escolha != 0) {
-
             if (escolha == 0) {
                 System.out.println("========== Saindo do programa.... ==========");
                 break;
             } else if (escolha == 1) {
-                menuCliente();
+                menuCliente(c1);
             } else if (escolha == 2) {
                 // Falta construir função para criar um novo cliente
                 break;
             } else if (escolha == 3) {
-                menuFuncionarios(p1);
+                menuFuncionarios(g1, p1);
             }
         }
     }
 
-    public void menuFuncionarios(Padeiro p1){
+    public void menuFuncionarios(Funcionario.Gerente g1, Padeiro p1){
         Scanner leitura = new Scanner(System.in);
         int escolha = 999;
 
         System.out.println("========== Bem vindo ao JannyPaes ==========\n");
         System.out.println("Digite: ");
-        System.out.println("1 - Gerente");
-        System.out.println("2 - Padeiro");
+        System.out.println("1 - poo.padaria.funcionarios.Funcionario.poo.padaria.funcionarios.Gerente");
+        System.out.println("2 - poo.padaria.funcionarios.Padeiro");
         System.out.println("0 - sair");
         escolha = leitura.nextInt();
 
@@ -64,20 +64,20 @@ public class Menu {
                 System.out.println("========== Saindo do programa.... ==========");
                 break;
             } else if (escolha == 1) {
-                menuGerente();
+                menuGerente(g1);
             } else if (escolha == 2) {
                 this.menuPadeiro(p1);
             }
         }
     }
 
-    public void menuGerente() {
+    public void menuGerente(Funcionario.Gerente g1) {
         int escolha = 999;
 
         while (escolha != 0) {
             Scanner leitura = new Scanner(System.in);
             System.out.println("========== Bem vindo ao JannyPaes ==========\n");
-            System.out.println("Olá gerente! ");
+            System.out.println("Olá gerente " + g1.getNome());
             System.out.println("Escolha uma opção para iniciar");
             System.out.println("1 - Adicionar novo funcionário");
             System.out.println("2 - Listar produtos");
@@ -86,19 +86,15 @@ public class Menu {
 
             if (escolha == 0) {
                 System.out.println("========== Saindo do programa.... ==========");
+                break;
             } else if (escolha == 1) {
                 System.out.println("Nome do funcionário: ");
                 String nome = leitura.nextLine();
-
                 System.out.println("Cargo do funcionário: ");
                 String cargo = leitura.nextLine();
-
                 System.out.println("Carga Horária diária: ");
                 int ch = leitura.nextInt();
-
-                padeiro = new Padeiro(nome, cargo, ch);
-                padaria.adicionarFuncionario(padeiro);
-                System.out.println("Adicionado com sucesso! ");
+                this.padeiro = new Padeiro(nome, cargo, ch);
             }
         }
     }
@@ -164,6 +160,7 @@ public class Menu {
     //     System.out.println("0 - sair");
     //     escolha = leitura.nextInt();
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream:src/poo/padaria/menu/Menu.java
     public void menuCliente() {
         int escolha = 999;
@@ -180,6 +177,11 @@ public class Menu {
     //     }
     // }
 >>>>>>> Stashed changes:src/Menu.java
+=======
+    public void menuCliente(Cliente c1) {
+        int escolha = 999;
+        Estoque estoque = new Estoque();
+>>>>>>> parent of a227534 (organizando administrador principal)
 
     // public void menuGerente(Gerente g1) {
     //     int escolha = 999;
@@ -187,14 +189,16 @@ public class Menu {
 <<<<<<< Updated upstream:src/poo/padaria/menu/Menu.java
             System.out.println("========== Bem vindo ao JannyPaes ==========\n");
             System.out.println("Escolha uma opção:");
-            System.out.println("1 - Vizualizar produtos");
-            System.out.println("2 - Ver carrinho");
+            System.out.println("1 - Vizualizar lista"); //adicionar ao carrinho e remorer
+            System.out.println("2 - Ver carrinho");// finalizar compra com desconto ou sair
             System.out.println("0 - sair");
             escolha = leitura.nextInt();
 
             if (escolha == 0) {
                 System.out.println("========== Saindo do programa.... ==========");
+                break;
             } else if (escolha == 1) {
+<<<<<<< HEAD
                 System.out.println(padaria.getEstoquePadaria());
 =======
     //     while (escolha != 0) {
@@ -206,6 +210,11 @@ public class Menu {
     //         System.out.println("2 - Listar produtos");
     //         System.out.println("0 - sair");
     //         escolha = leitura.nextInt();
+=======
+                System.out.println("Deseja adicionar um desses produtos ? ");
+                System.out.println("5 - Sim e 6 - Não");
+                System.out.println(estoque.getListaProdutos());
+>>>>>>> parent of a227534 (organizando administrador principal)
 
     //         if (escolha == 0) {
     //             System.out.println("========== Saindo do programa.... ==========");
