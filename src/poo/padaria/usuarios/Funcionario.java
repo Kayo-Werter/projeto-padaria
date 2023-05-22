@@ -54,6 +54,7 @@ public class Funcionario {
     public void setValorHora(double valorHora) {
         this.valorHora = valorHora;
     }
+<<<<<<< Updated upstream:src/poo/padaria/usuarios/Funcionario.java
 
     public static class Gerente extends Funcionario {
 
@@ -77,3 +78,6 @@ public class Funcionario {
                 ", cargo: " + cargo;
     }
 }
+=======
+}
+>>>>>>> Stashed changes:src/Funcionario.java
