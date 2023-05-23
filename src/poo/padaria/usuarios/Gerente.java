@@ -12,6 +12,6 @@ public class Gerente extends Funcionario{
 
     @Override
     public double getSalario(){
-        return getCargaHoraria() * 10;
+        return getCargaHoraria() * 21;
     }
 }

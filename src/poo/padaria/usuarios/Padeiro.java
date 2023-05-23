@@ -60,7 +60,7 @@ public class Padeiro extends Funcionario {
 
     @Override
     public double getSalario() {
-        return (getCargaHoraria() * 4) * 7.5;
+        return getCargaHoraria() * 7.5;
     }
 
 

@@ -15,10 +15,17 @@ import java.util.Scanner;
 public class Padaria {
     private List<Produtos> listaProdutos = new ArrayList<>();
     private List<Cliente> listaClientes = new ArrayList<>();
-    private List<Funcionario> listaFuncionarios = new ArrayList<>();
-
+    private Padeiro padeiro;
+    private Gerente gerente;
     private List<HistoricoDeCompras> historicoDeVendas = new ArrayList<>();
 
+    public Padeiro getPadeiro() {
+        return padeiro;
+    }
+
+    public Gerente getGerente() {
+        return gerente;
+    }
 
     public void inicializar(){
         dadosPadaria();
@@ -107,13 +114,8 @@ public class Padaria {
         this.listaProdutos.add(presunto);
         this.listaProdutos.add(mussarela);
 
-        Padeiro chines = new Padeiro("Chines", "Padeiro", 44);
-        Padeiro kayo = new Padeiro("Kayo", "Padeiro", 44);
-        Gerente janny = new Gerente("Janny", "Gerente", 20);
-
-        this.listaFuncionarios.add(chines);
-        this.listaFuncionarios.add(kayo);
-        this.listaFuncionarios.add(janny);
+        padeiro = new Padeiro("Chines", "Padeiro", 176);
+        gerente = new Gerente("Janny", "Gerente", 120);
 
 
 
